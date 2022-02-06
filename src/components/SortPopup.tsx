@@ -1,16 +1,20 @@
 import React, {useState} from "react";
 
-
+type objItemType = {
+    name: string
+    type: string
+}
 
 type SortPopupPropsType = {
-    items: string[]
+    items: objItemType[];
 }
 
 export const SortPopup: React.FC<SortPopupPropsType> = ({items}) => {
 
     const [visiblePopup, setVisiblePopup] = React.useState<boolean>(false);
     const [activeItem, setActiveItem] = useState<number>(0);
-    const activeLabel: string = items[activeItem];
+
+    const activeLabel: string = items[activeItem].name;
 
     const sortRef = React.useRef<HTMLDivElement | null>(null);
 
@@ -51,11 +55,11 @@ export const SortPopup: React.FC<SortPopupPropsType> = ({items}) => {
                     {items
                     && items.map((item, index) => {
                         return (
-                          <li key={`${item}_${index}`}
+                          <li key={`${item.type}_${index}`}
                               className={activeItem === index ? 'active' : ''}
                               onClick={() => onSelectItem(index)}
                           >
-                              {item}
+                              {item.name}
                           </li>
                         );
                     })}
