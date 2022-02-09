@@ -75,6 +75,7 @@ class App extends React.Component<mapStateToPropsType & mapDispatchPropsType> {
                         <Route path={'/'} element={<Home items={this.props.items}/>}/>
                         <Route path={'/cart'} element={<Cart/>}/>
                     </Routes>
+
                 </div>
             </div>
         );
