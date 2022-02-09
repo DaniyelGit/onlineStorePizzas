@@ -13,7 +13,8 @@ export const PizzasReducer = (state = initialState, action: generalActionsForPiz
     switch (action.type) {
         case 'SET_PIZZAS': {
             return {
-                ...state, items: action.payload
+                ...state,
+                items: action.payload
             };
         }
         default: {
