@@ -2,7 +2,7 @@ import {generalActionsForFilters} from "../actions/filtersAC";
 
 type initialStateType = {
     category: number
-    sortBy: string
+    sortBy: 'popular' | 'price' | 'alphabet';
 }
 
 const initialState: initialStateType = {
@@ -14,8 +14,15 @@ export const FiltersReducer = (state = initialState, action: generalActionsForFi
     switch (action.type) {
         case 'SET_SORT_BY': {
             return {
-                ...state, sortBy: action.payload
+                ...state,
+                sortBy: action.payload
             };
+        }
+        case 'SET_CATEGORY': {
+            return {
+                ...state,
+                category: action.payload
+            }
         }
         default: {
             return state;

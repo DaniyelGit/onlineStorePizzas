@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import * as path from "path";
 
 type objItemType = {
     name: string

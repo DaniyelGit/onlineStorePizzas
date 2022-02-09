@@ -3,12 +3,12 @@ import React from "react";
 
 import {Categories, PizzaBlock, SortPopup} from "../components";
 
-import {arrPizzasType} from "../App";
+import {ArrPizzasType} from "../App";
 
 
 
 type HomePropsType = {
-    items: arrPizzasType
+    items: ArrPizzasType
 }
 
 export const Home: React.FC<HomePropsType> = ({items}) => {

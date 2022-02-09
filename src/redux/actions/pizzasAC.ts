@@ -1,12 +1,14 @@
+import {ArrPizzasType} from "../../App";
+
 type setPizzasType = {
     type: 'SET_PIZZAS',
-    payload: []
+    payload: ArrPizzasType
 }
 
-export const setPizzas = (items: []): setPizzasType => {
+export const setPizzas = (items: ArrPizzasType): setPizzasType => {
     return {
         type: 'SET_PIZZAS',
-        payload: items
+        payload: items,
     } as const
 }
 

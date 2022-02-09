@@ -1,7 +1,8 @@
 import {generalActionsForPizzas} from "../actions/pizzasAC";
+import {ArrPizzasType} from "../../App";
 
 type initialStateType = {
-    items: []
+    items: ArrPizzasType
 }
 
 const initialState: initialStateType = {

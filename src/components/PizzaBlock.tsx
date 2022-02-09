@@ -1,11 +1,11 @@
 import React from "react";
 import classNames from "classnames";
 
-import {pizzasStateType} from "../App";
+import {PizzasStateType} from "../App";
 
 
 type PizzaBlockPropsType = {
-    item: pizzasStateType
+    item: PizzasStateType
 }
 
 type PizzaTypes = 'тонкое' | 'традиционное';

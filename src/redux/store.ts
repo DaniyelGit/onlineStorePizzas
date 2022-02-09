@@ -1,11 +1,12 @@
-import {combineReducers, createStore} from "redux"
+import {compose, createStore} from "redux"
+import {rootReducer} from "./reducers";
 
 
-const rootReducer = combineReducers({
 
-});
+const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // settings de
 
 
-export type rootReducerType = ReturnType<typeof rootReducer>;
+export const store = createStore(rootReducer, composeEnhancers());
 
-export const store = createStore(rootReducer);
+// @ts-ignore
+console.log(window.store = store);
