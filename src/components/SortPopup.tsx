@@ -39,7 +39,7 @@ export const SortPopup: React.FC<SortPopupPropsType> = ({items}) => {
         document.body.addEventListener('click', (e: any) =>  handleOutsideClick (e) )
     }, []);
 
-// тест
+// test
     return (
         <div ref={sortRef} className="sort">
             <div className="sort__label">
