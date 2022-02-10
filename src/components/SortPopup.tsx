@@ -39,10 +39,9 @@ export const SortPopup: React.FC<SortPopupPropsType> = ({items}) => {
         document.body.addEventListener('click', (e: any) =>  handleOutsideClick (e) )
     }, []);
 
-
+// тест
     return (
         <div ref={sortRef} className="sort">
-
             <div className="sort__label">
                 <svg  className={visiblePopup ? 'rotated' : ''} width="10" height="6" viewBox="0 0 10 6" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
