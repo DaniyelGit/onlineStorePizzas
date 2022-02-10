@@ -9,4 +9,4 @@ const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ||
 export const store = createStore(rootReducer, composeEnhancers());
 
 // @ts-ignore
-// console.log(window.store = store);
+console.log(window.store = store);

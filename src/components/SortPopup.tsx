@@ -29,6 +29,7 @@ export const SortPopup: React.FC<SortPopupPropsType> = ({items}) => {
     }
 
     const handleOutsideClick = (e: MouseEvent & {path: Node[]}) => {
+        debugger
        if (!e.path.includes(sortRef.current as Node)) {
             setVisiblePopup(false);
        }
@@ -41,6 +42,7 @@ export const SortPopup: React.FC<SortPopupPropsType> = ({items}) => {
 
     return (
         <div ref={sortRef} className="sort">
+
             <div className="sort__label">
                 <svg  className={visiblePopup ? 'rotated' : ''} width="10" height="6" viewBox="0 0 10 6" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
