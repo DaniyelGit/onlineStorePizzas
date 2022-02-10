@@ -53,6 +53,7 @@ export const SortPopup: React.FC<SortPopupPropsType> = ({items}) => {
                 <span onClick={toggleVisiblePopup}>{activeLabel}</span>
             </div>
             {visiblePopup && <div className="sort__popup">
+                {/*<h1></h1>*/}
                 <ul>
                     {items
                     && items.map((item, index) => {
